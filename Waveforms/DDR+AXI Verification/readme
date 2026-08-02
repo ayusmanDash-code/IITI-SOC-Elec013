@@ -1,0 +1,20 @@
+This is the readme for DDR and AXI Verification waveforms
+We have created
+SELF CHECKING TESTBENCH for DDR and AXI verification
+which contains pass variables for different internal conditions
+
+1. DDR -> 
+  Waveform verifies that the double-sized data presented to 
+  the rising edge is correctly divided and presented onto
+  the rising and falling edges of the clock.
+  The waveform shows pass details of the color outputs i.e. 
+  RED, BLUE and GREEN and the sync outputs i.e.
+  HSYNC and VSYNC. 
+
+2. AXI ->
+  This waveform shows the verification of myip (custom AXI Peripheral)
+  We update data using axi_write (function created in tb_self_check_axi.v)
+  The waveform shows pass details of whether the
+  block size, speed and color state variables are
+  getting duely updated. Additionally, an all_tests_passed variable
+  remains high only if all other tests pass.                               
